@@ -155,6 +155,40 @@ forge script script/Deploy.s.sol --rpc-url $RPC_URL --broadcast --verify</code><
       </p>
     </div>
   </section>
+
+  <section class="shell">
+    <h2 id="try">Try it</h2>
+    <p>
+      This is the hook running, not a picture of it. Connect a wallet on a chain it is deployed to, or bring the whole
+      stack up locally in one command and use it with no funds and no wallet risk at all.
+    </p>
+    <div class="demo" data-demo="retro-rebate">
+      <div class="panel panel--empty">
+        <p>Loading the demo… if this does not change, JavaScript is blocked and the demo cannot run.</p>
+      </div>
+    </div>
+    <details class="raw">
+      <summary>Run the whole thing locally</summary>
+      <pre><code>git clone --recurse-submodules https://github.com/nirholas/retro-rebate
+cd retro-rebate
+
+anvil &amp;
+forge script script/DeployLocal.s.sol --rpc-url http://127.0.0.1:8545 --broadcast \
+  --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+
+node web/build.mjs &amp;&amp; npx serve web/dist</code></pre>
+      <p class="muted">
+        The deploy script writes <code>web/local.json</code> itself and the build merges it, so the page points at the
+        chain you just created without you editing anything. Point a wallet at
+        <code>http://127.0.0.1:8545</code> and every button on this page works.
+      </p>
+      <p class="muted">
+        Anvil's first account is pre-funded and its key is public by design. Never use it anywhere real.
+      </p>
+    </details>
+  </section>
+  <script type="application/json" id="deployments">{"chains":{},"errors":[{"type":"error","name":"AlreadyClaimed","inputs":[{"name":"epoch","type":"uint256","internalType":"uint256"}]},{"type":"error","name":"EpochNotClosed","inputs":[{"name":"epoch","type":"uint256","internalType":"uint256"}]},{"type":"error","name":"HookFeeTooLarge","inputs":[]},{"type":"error","name":"HookNotImplemented","inputs":[]},{"type":"error","name":"InvalidEpoch","inputs":[]},{"type":"error","name":"InvalidPool","inputs":[]},{"type":"error","name":"NotPoolManager","inputs":[]},{"type":"error","name":"NothingToClaim","inputs":[{"name":"epoch","type":"uint256","internalType":"uint256"}]},{"type":"error","name":"PayoutNotPoolManager","inputs":[]},{"type":"error","name":"SkimTooLarge","inputs":[]},{"type":"error","name":"WrongPool","inputs":[]}],"demo":{"panel":"rewards","title":"A volume rebate settled on-chain","lede":"Each swap skims into that epoch's pot. Once the epoch closes both the pot and the totals are final, so a claim is one division anybody can check and nobody can withhold.","calls":[{"name":"currentEpoch","inputs":[],"args":[],"outputs":["uint256"],"reads":[{"label":"Current epoch","format":"raw"}]}],"owed":{"name":"claimable","args":["epoch","account"],"types":{"epoch":"uint256"}},"owedLabel":"claimable for that epoch","claim":{"name":"claim","inputs":[{"type":"uint256","from":"epoch"},{"type":"address","from":"account"}],"form":[{"name":"epoch","label":"Epoch to claim","hint":"Must be a closed epoch: the running one is not final.","default":"0"}]},"claimLabel":"Claim that epoch"}}</script>
+  <script type="module" src="/assets/demo.js"></script>
 </main>
 
 <footer class="foot">

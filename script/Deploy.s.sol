@@ -36,12 +36,19 @@ import {RetroRebateHook} from "src/hooks/RetroRebateHook.sol";
 contract DeployRetroRebate is Script {
     uint160 internal constant FLAGS = uint160(Hooks.AFTER_INITIALIZE_FLAG | Hooks.AFTER_SWAP_FLAG | Hooks.AFTER_SWAP_RETURNS_DELTA_FLAG);
 
+    /// @notice Set before deploying: this is part of what the pool is, and it cannot change afterwards.
+    uint24 public _skimBps;
+
+    /// @notice Set before deploying: this is part of what the pool is, and it cannot change afterwards.
+    uint32 public _epochLength;
+
+
     function run() external {
         IPoolManager manager = Chains.poolManager(block.chainid);
         require(address(manager) != address(0), "no Uniswap v4 PoolManager known for this chain");
 
         bytes memory creationCode = type(RetroRebateHook).creationCode;
-        bytes memory constructorArgs = abi.encode(manager);
+        bytes memory constructorArgs = abi.encode(manager, _skimBps, _epochLength);
 
         (address predicted, bytes32 salt) =
             HookMiner.find(Chains.CREATE2_DEPLOYER, FLAGS, creationCode, constructorArgs);
@@ -56,7 +63,7 @@ contract DeployRetroRebate is Script {
         }
 
         vm.startBroadcast();
-        RetroRebateHook hook = new RetroRebateHook{salt: salt}(manager);
+        RetroRebateHook hook = new RetroRebateHook{salt: salt}(manager, _skimBps, _epochLength);
         vm.stopBroadcast();
 
         require(address(hook) == predicted, "mined address did not match the deployment");
