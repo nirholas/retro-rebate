@@ -1,0 +1,30 @@
+{
+  "name": "retro-rebate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A volume rebate the pool pays out of its own flow, settled on-chain at the end of each epoch, with no Merkle root, no off-chain calculation and nobody who can decline to publish it.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nirholas/retro-rebate.git"
+  },
+  "homepage": "https://retro-rebate.pages.dev",
+  "keywords": [
+    "uniswap",
+    "uniswap-v4",
+    "uniswap-hooks",
+    "defi",
+    "amm",
+    "solidity",
+    "rebate",
+    "volume",
+    "epochs",
+    "no-merkle",
+    "no-admin"
+  ],
+  "scripts": {
+    "build": "node web/build.mjs",
+    "contracts:build": "forge build",
+    "contracts:test": "forge test"
+  }
+}
