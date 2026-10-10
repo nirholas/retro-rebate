@@ -1,5 +1,10 @@
 # RetroRebate
 
+<!-- three.ws:badges -->
+[![GitHub stars](https://img.shields.io/github/stars/nirholas/retro-rebate?style=flat&logo=github)](https://github.com/nirholas/retro-rebate/stargazers) [![License](https://img.shields.io/github/license/nirholas/retro-rebate?style=flat)](https://github.com/nirholas/retro-rebate/blob/HEAD/LICENSE) [![Last commit](https://img.shields.io/github/last-commit/nirholas/retro-rebate?style=flat)](https://github.com/nirholas/retro-rebate/commits) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat)](https://github.com/nirholas/retro-rebate/pulls) [![AI agent friendly](https://img.shields.io/badge/AI%20agents-AGENTS.md%20%2B%20llms.txt-6d5dfc?style=flat)](https://github.com/nirholas/retro-rebate/blob/HEAD/AGENTS.md)
+<!-- /three.ws:badges -->
+
+
 **A volume rebate the pool pays out of its own flow, settled on-chain at the end of each epoch, with no Merkle root, no off-chain calculation and nobody who can decline to publish it.**
 
 A production Uniswap v4 hook. It holds no funds and takes no fee for itself. No owner, no pause switch, no upgrade path.
@@ -110,3 +115,26 @@ Not affiliated with Uniswap Labs.
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=nirholas/retro-rebate&type=Date)](https://www.star-history.com/#nirholas/retro-rebate&Date)
+
+<!-- three.ws:growth -->
+## Support the project
+
+If retro-rebate saves you time, **[star it on GitHub](https://github.com/nirholas/retro-rebate)**. Stars are how other developers and AI agents find the repositories worth trusting, and they cost you one click.
+
+Know someone who would use it? [Post on X](https://twitter.com/intent/tweet?text=retro-rebate%3A%20A%20volume%20rebate%20the%20pool%20pays%20out%20of%20its%20own%20flow%2C%20settled%20on-chain%20at%20the%20end%20of%20each%20epoch%2C%20with&url=https%3A%2F%2Fgithub.com%2Fnirholas%2Fretro-rebate) · [Share on Bluesky](https://bsky.app/intent/compose?text=retro-rebate%3A%20A%20volume%20rebate%20the%20pool%20pays%20out%20of%20its%20own%20flow%2C%20settled%20on-chain%20at%20the%20end%20of%20each%20epoch%2C%20with%20https%3A%2F%2Fgithub.com%2Fnirholas%2Fretro-rebate) · [Share on LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgithub.com%2Fnirholas%2Fretro-rebate) · [Submit to Hacker News](https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fgithub.com%2Fnirholas%2Fretro-rebate&t=retro-rebate%3A%20A%20volume%20rebate%20the%20pool%20pays%20out%20of%20its%20own%20flow%2C%20settled%20on-chain%20at%20the%20end%20of%20each%20epoch%2C%20with) · [Share on Reddit](https://www.reddit.com/submit?url=https%3A%2F%2Fgithub.com%2Fnirholas%2Fretro-rebate&title=retro-rebate%3A%20A%20volume%20rebate%20the%20pool%20pays%20out%20of%20its%20own%20flow%2C%20settled%20on-chain%20at%20the%20end%20of%20each%20epoch%2C%20with)
+
+## Built for AI agents too
+
+Coding agents and LLM tooling can read this repo directly: [AGENTS.md](./AGENTS.md), [llms.txt](./llms.txt), [llms-full.txt](./llms-full.txt). Point an agent at `https://github.com/nirholas/retro-rebate` and it has the context it needs.
+
+## More from the same author
+
+- [All repositories by nirholas](https://github.com/nirholas/nirholas#readme): the full catalog, grouped by topic
+- [three.ws](https://three.ws): the platform for 3D AI agents with Solana wallets, a skill marketplace and x402 payments
+- Questions or ideas: [open an issue](https://github.com/nirholas/retro-rebate/issues) or [start a discussion](https://github.com/nirholas/retro-rebate/discussions)
+
+## Contributors
+
+[![Contributors](https://contrib.rocks/image?repo=nirholas/retro-rebate)](https://github.com/nirholas/retro-rebate/graphs/contributors)
+
+<!-- /three.ws:growth -->

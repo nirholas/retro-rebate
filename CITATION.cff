@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: "retro-rebate"
+abstract: "A volume rebate the pool pays out of its own flow, settled on-chain at the end of each epoch, with no Merkle root, no off-chain calculation and nobody who can decline to publish it."
+license: Apache-2.0
+repository-code: "https://github.com/nirholas/retro-rebate"
+url: "https://three.ws"
+authors:
+  - name: three.ws
+    website: "https://three.ws"
